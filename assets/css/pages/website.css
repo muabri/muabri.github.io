@@ -1,0 +1,57 @@
+/* Responsive Video Section Mobile */
+#video-mobile {
+    padding: 6.5rem 0 !important;
+}
+
+@media (max-width: 425px) {
+    #video-mobile {
+        padding: 5.5rem 0 !important;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #video-mobile {
+        padding: 11.3rem 0 !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #video-mobile {
+        padding: 5rem 0 !important;
+    }
+}
+
+/* END Responsive Video Section Mobile */
+
+
+/* Responsive Pricing 'RP' Mobile */
+@media (max-width: 425px) {
+    .pricing {
+        font-size: 12px;
+    }
+}
+
+/* END Responsive Pricing 'RP' Mobile */
+
+/* Arrow Portof */
+.owl-prev {
+    top: 0.7rem;
+}
+
+.owl-next {
+    top: 0.7rem;
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    .owl-prev {
+        top: 1rem;
+    }
+
+    .owl-next {
+        top: 1rem;
+    }
+}
+
+/* END Arrow Portof */
+

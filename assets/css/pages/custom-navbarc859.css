@@ -1,0 +1,105 @@
+/* ========= Top Announce ========= */
+.sticky-custom {
+    /* top: 6rem; */
+    top: 9.5rem;
+    margin-top: 0px;
+}
+
+#alert-announce {
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    /* padding: 1rem 1.25rem; */
+    position: relative;
+    z-index: 100;
+    box-shadow: 1px 10px 30px 1px rgba(34, 34, 34, 0.3);
+    -webkit-box-shadow: 1px 10px 30px 1px rgba(34, 34, 34, 0.3);
+    -moz-box-shadow: 1px 10px 30px 1px rgba(34, 34, 34, 0.3);
+}
+
+/* Mobile */
+@media (min-width: 321px) {
+    .sticky-custom {
+        top: 6.5rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Mobile SM */
+@media (min-width: 382px) {
+    .sticky-custom {
+        top: 6rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Mobile LG */
+@media (min-width: 425px) {
+    .sticky-custom {
+        /* top: 5.3rem; */
+        top: 5rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Tablet SM */
+@media (min-width: 697px) {
+    .sticky-custom {
+        top: 3.7rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .sticky-custom {
+        /* top: 3.5rem; */
+        top: 5rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .sticky-custom {
+        top: 2.5rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+/* Laptop LG */
+@media (min-width: 1441px) {
+    .sticky-custom {
+        top: 2.5rem;
+        margin-top: 0px;
+    }
+
+    #alert-announce {
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+/* ========= END Top Announce ========= */

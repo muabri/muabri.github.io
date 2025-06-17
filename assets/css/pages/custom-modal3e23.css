@@ -1,0 +1,61 @@
+/* ========= Modal Konsultasi Option ========= */
+/* Style untuk centang */
+.check-icon {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background: #0d6efd;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.check-icon::before {
+    content: "✔";
+    display: block;
+}
+
+/* Style Small Badge */
+.badge-online-meet {
+    position: absolute;
+    top: calc(50% - 30px);
+    right: 0;
+    background-color: #dc3545;
+    /* Warna merah */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.badge-online-chat {
+    position: absolute;
+    top: 42%;
+    right: 0;
+    background-color: #3b7dff;
+    /* Warna merah */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Ketika radio button dipilih */
+input[type="radio"]:checked + label .check-icon {
+    display: flex;
+}
+
+input[type="radio"]:checked + label {
+    border: 1px solid rgba(55, 125, 255, 0.7);
+}
+
+/* ========= END Modal Konsultasi Option ========= */

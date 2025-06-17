@@ -1,0 +1,32 @@
+/* ========= All Pages Digital Campaign CSS ========= */
+/* Cricle slider color */
+.range-slider-custom .irs-handle {
+    background-color: #387CFF !important;
+}
+
+/* END Cricle slider color */
+
+/* Responsive image penawaran */
+.image-offer {
+    height: 90px;
+    width: 90px;
+}
+
+@media (max-width: 375px) {
+    .image-offer {
+        height: 85px;
+        width: 85px;
+    }
+}
+
+/* END Responsive image penawaran */
+
+/* Slider Popup Hidden */
+.irs--flat .irs-min,
+.irs--flat .irs-max,
+.range-slider-custom .irs-single {
+    display: none;
+}
+
+/* END Slider Popup Hidden */
+

@@ -1,0 +1,62 @@
+/* ######## CUSTOM Style SOCIAL MEDIA MANAGEMENT Page ######## */
+/* ########################################################### */
+
+/* Shape Video SMM Responsive Mobile */
+#shape-video {
+    bottom: -2rem;
+    left: 5rem;
+}
+
+@media (max-width: 425px) {
+    #shape-video {
+        bottom: -2rem;
+        left: 0rem;
+    }
+}
+
+/* END Shape Video SMM Responsive Mobile */
+
+
+/* Image Manfaat Layanan Responsive Mobile */
+.img-fluid.manfaat-layanan {
+    max-width: 85% !important;
+}
+
+@media (max-width: 425px) {
+    .img-fluid.manfaat-layanan {
+        max-width: 50% !important;
+    }
+}
+
+/* END Image Manfaat Layanan Responsive Mobile */
+
+/* Disabled Div */
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* END Disabled Div */
+
+
+/* Arrow Portof */
+.owl-prev {
+    top: 3rem;
+}
+
+.owl-next {
+    top: 3rem;
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    .owl-prev {
+        top: 1.5rem;
+    }
+
+    .owl-next {
+        top: 1.5rem;
+    }
+}
+
+/* END Arrow Portof */

@@ -1,0 +1,140 @@
+ .max-w-14rem {
+  max-width: 6.5rem;
+}
+ 
+ /* Arrow Slider on OWL Carousel */
+ /* Technology */
+ .owl-carousel-tech .owl-prev {
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 0;
+     left: -5px;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ .owl-carousel-tech .owl-next {
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 0;
+     right: -10px;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ /* END Technology */
+
+ /* Testimoni */
+ .owl-carousel-testi .owl-nav [class*=owl-] {
+     color: white !important;
+ }
+
+ .owl-carousel-testi .owl-nav [class*=owl-]:hover {
+     background-color: transparent !important;
+     color: rgba(255, 255, 255, 0.7) !important;
+ }
+
+ .owl-carousel-testi .owl-prev {
+     font-size: 3rem !important;
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 35%;
+     left: -5px;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ .owl-carousel-testi .owl-next {
+     font-size: 3rem !important;
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 35%;
+     right: -5px;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ /* END Testimoni */
+
+ /* Portofolio */
+ .owl-carousel-portof .owl-nav [class*=owl-] {
+     color: #677788 !important;
+ }
+
+ .owl-carousel-portof .owl-nav [class*=owl-]:hover {
+     background-color: transparent !important;
+     color: #869791 !important;
+ }
+
+ .owl-carousel-portof .owl-prev {
+     font-size: 3rem !important;
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 43.5%;
+     left: 1rem;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ .owl-carousel-portof .owl-next {
+     font-size: 3rem !important;
+     width: 15px;
+     /* height: 100px; */
+     position: absolute;
+     top: 43.5%;
+     right: 1rem;
+     display: block !important;
+     border: 0px solid black;
+ }
+
+ @media (max-width: 428px) {
+     .owl-carousel-portof .owl-prev {
+         left: 0rem;
+     }
+
+     .owl-carousel-portof .owl-next {
+         right: 0rem;
+     }
+ }
+
+ /* END Portofolio */
+ /* END Arrow Slider on OWL Carousel */
+
+ /* Hide Official Partners */
+ #official-partners {
+     display: none;
+ }
+
+ /* END Hide Official Partners */
+
+ /* Swiper Slide Button */
+ .carousel-control-pricing {
+     width: 1.5rem;
+     height: 1.5rem;
+     top: 40%;
+ }
+
+ .carousel-control-pricing svg {
+     width: 1.5rem;
+     height: 1.5rem;
+ }
+
+ .carousel-indicators li {
+     background-color: rgba(55, 125, 255, 0.7);
+ }
+
+ .carousel-indicators .active {
+     background-color: rgba(55, 125, 255, 1);
+     opacity: 1;
+ }
+
+ .carousel-indicators {
+     bottom: -2.5rem;
+ }
+
+ /* END Swiper Pricing */

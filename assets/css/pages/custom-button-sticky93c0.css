@@ -1,0 +1,176 @@
+/* ========= Whatsapp Button - Kanan Bawah ========= */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp #main-img {
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+    width: 8rem;
+}
+
+.btn-whatsapp #main-img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp-card {
+    position: fixed;
+    width: 20rem;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp-card #second-img {
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+    bottom: -18rem;
+    right: 1px;
+}
+
+.btn-whatsapp-card #second-whatsapp {
+    width: 8rem;
+}
+
+/* Animated */
+.animated-default {
+    bottom: 8rem;
+}
+
+.animated-show {
+    animation: smooth-show 0.7s ease forwards;
+}
+
+.animated-hide {
+    animation: smooth-hide 0.7s ease forwards;
+}
+
+@keyframes smooth-show {
+    from {
+        bottom: -18rem;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0rem;
+        opacity: 1;
+    }
+}
+
+@keyframes smooth-hide {
+    from {
+        bottom: 0rem;
+        opacity: 1;
+    }
+
+    to {
+        bottom: -18rem;
+        opacity: 1;
+    }
+}
+
+/* END Animated */
+
+/* Captcha Whatsapp */
+.grecaptcha-badge {
+    display: none !important;
+}
+/* END Captcha Whatsapp */
+
+/* ========= END Whatsapp Button - Kanan Bawah ========= */
+
+/* ========= Button Sticky - Kiri Bawah ========= */
+.floating-icons {
+    position: fixed;
+    bottom: 15px;
+    /* Jarak dari bawah layar */
+    left: 15px;
+    /* Jarak dari sisi kiri layar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9fafc;
+    /* Warna latar opsional */
+    padding: 10px 15px;
+    border-radius: 20px;
+    /* Membuat sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.floating-icons a {
+    /* Spasi antar ikon */
+    margin: 7px 0;
+}
+
+.floating-icons .icon {
+    width: 35px;
+    /* Ukuran ikon */
+    height: 35px;
+    border-radius: 50%;
+    /* Membuat ikon bulat */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.floating-icons .icon:hover {
+    transform: scale(1.1);
+    /* Efek hover memperbesar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.floating-icons .close-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff5e57;
+    /* Warna tombol */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Membuat tombol bulat */
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.floating-icons .close-btn:hover {
+    background: #e63946;
+    /* Warna saat hover */
+}
+
+@media (max-width: 768px) {
+    .floating-icons {
+        padding: 5px 10px;
+        /* Sesuaikan padding jika diperlukan */
+    }
+
+    .floating-icons a {
+        margin: 5px 0;
+        /* Kurangi spasi antar ikon */
+    }
+
+    .floating-icons .icon {
+        width: 30px;
+        /* Ukuran ikon lebih kecil */
+        height: 30px;
+        /* Ukuran ikon lebih kecil */
+    }
+}
+
+/* ========= END Button Sticky - Kiri Bawah ========= */
