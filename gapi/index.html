@@ -53,8 +53,10 @@
   <link rel="stylesheet" href="../assets/vendor/cubeportofolio/css/cubeportofolio.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/pages/homepage.mina847.css?v.0912">
+  <link rel="stylesheet" href="style.css">
   <!-- END CSS Page -->
 
+  
 </head>
 
 <body>
@@ -128,7 +130,7 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <section id="mlbb-data-section">
+    <section id="data-display-section">
       <div class="container space-top-3 space-top-lg-3 space-bottom-1">
         <div class="w-lg-65 mx-lg-auto">
           <nav aria-label="breadcrumb">
@@ -143,7 +145,12 @@
           </div>
 
           <div class="blog-content">
-            <div id="mlbb-data-container">
+            <div class="search-form-container mb-0">
+                <input type="text" id="search-input" placeholder="Cari..." aria-label="Search form">
+            </div>
+
+            <div id="data-table-container" class="table-responsive-container">
+                <p style="text-align: center;">Memuat data dari Google Sheet...</p>
             </div>
           </div>
 
@@ -408,77 +415,6 @@
     });
   </script>
 
-  <script>
-    // Tempatkan kode ini di dalam <script> tag di HTML atau di file js/script.js Anda
-    document.addEventListener('DOMContentLoaded', (event) => {
-
-        // Ganti URL ini dengan URL Web app dari Google Apps Script Anda yang sudah di-deploy
-        const apiUrl = 'https://script.google.com/macros/s/AKfycbxhN2rJiPJKA2qMQmflWQMSna3o3d55Wg4zu9I5tzhx5NwlbMN2h7qlcPY5d-h5DWm_/exec';
-
-        // Wadah tempat tabel akan dimasukkan
-        const dataContainer = document.getElementById('mlbb-data-container');
-
-        // Fungsi untuk memuat dan menampilkan data
-        async function loadAndDisplayData() {
-            // Tampilkan pesan loading
-            dataContainer.innerHTML = '<p>Memuat data...</p>';
-
-            try {
-                const response = await fetch(apiUrl);
-                
-                // Cek jika respons HTTP tidak OK (misalnya error 404, 500, dll)
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                // Konversi respons ke format JSON
-                const data = await response.json();
-
-                // Cek jika data kosong
-                if (!Array.isArray(data) || data.length === 0) {
-                    dataContainer.innerHTML = '<p>Tidak ada data yang tersedia.</p>';
-                    return;
-                }
-
-                // --- BAGIAN INI MEMBANGUN TABEL HTML SECARA DINAMIS ---
-                let htmlTable = '<table border="1" style="border-collapse: collapse; width: 100%;">';
-
-                // 1. Buat HEADER TABEL (<thead>)
-                // Mengambil kunci/nama kolom dari objek data pertama (misalnya: Timestamp, Nama, No Telp, dll)
-                const headers = Object.keys(data[0]);
-                htmlTable += '<thead><tr>';
-                headers.forEach(header => {
-                    htmlTable += `<th style="padding: 10px; background-color: #f2f2f2; text-align: left;">${header}</th>`;
-                });
-                htmlTable += '</tr></thead>';
-
-                // 2. Buat BARIS DATA (<tbody>)
-                htmlTable += '<tbody>';
-                data.forEach(row => {
-                    htmlTable += '<tr>';
-                    // Loop melalui setiap kolom untuk membuat sel (<td>)
-                    headers.forEach(header => {
-                        const cellValue = row[header] || ''; // Ambil nilai sel, jika null/undefined tampilkan string kosong
-                        htmlTable += `<td style="padding: 10px;">${cellValue}</td>`;
-                    });
-                    htmlTable += '</tr>';
-                });
-                htmlTable += '</tbody></table>';
-
-                // 3. Masukkan tabel HTML yang sudah dibuat ke dalam wadah (container)
-                dataContainer.innerHTML = htmlTable;
-
-            } catch (error) {
-                console.error('Gagal memuat data:', error);
-                dataContainer.innerHTML = '<p>Maaf, gagal memuat data. Silakan coba lagi nanti.</p>';
-            }
-        }
-
-        // Panggil fungsi untuk memuat data
-        loadAndDisplayData();
-    });
-  </script>
-
   <!-- JS Page -->
   <script src="../assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
@@ -490,6 +426,7 @@
 
   <!-- Custom Script -->
   <script src="../assets/js/pages/homepage.mina847.js?v.0912"></script>
+  <script src="script.js"></script>
 
   <script>
   // Clients Section Hover 

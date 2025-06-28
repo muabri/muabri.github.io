@@ -1,0 +1,100 @@
+/* --- CSS untuk Tampilan Tabel & Pencarian --- */
+
+.data-display-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.data-display-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+.search-form-container {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px; /* Bentuk pil */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #007bff; /* Warna border saat fokus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Container untuk membuat tabel responsif */
+.table-responsive-container {
+    width: 100%;
+    overflow-x: auto; /* Membuat tabel bisa di-scroll horizontal di layar kecil */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Styling Tabel */
+#data-table-container table {
+    width: 100%;
+    min-width: 700px; /* Lebar minimum agar tidak terlalu kecil di ponsel */
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Penting untuk border-radius */
+}
+
+#data-table-container th,
+#data-table-container td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #e9ecef; /* Garis antar sel */
+    font-size: 0.95rem;
+    color: #343a40;
+}
+
+#data-table-container th {
+    background-color: #007bff; /* Warna header tabel */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Styling untuk baris ganjil/genap (zebra-stripe) */
+#data-table-container tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#data-table-container tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Styling pesan loading */
+#data-table-container p {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+    .data-display-section .container {
+        padding: 20px;
+    }
+    #search-input {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    #data-table-container th,
+    #data-table-container td {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
