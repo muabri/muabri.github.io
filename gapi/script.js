@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Fungsi untuk memuat data dari API
     async function fetchData() {
-        dataContainer.innerHTML = '<p style="text-align: center;">Memuat data dari Google Sheet...</p>';
+        dataContainer.innerHTML = '<p style="text-align: center; margin-top: 7px;">Loading data...</p>';
         try {
             const response = await fetch(apiUrl);
             if (!response.ok) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Fungsi untuk membuat dan menampilkan tabel dari array data
     function renderTable(data) {
         if (!Array.isArray(data) || data.length === 0) {
-            dataContainer.innerHTML = '<p style="text-align: center;">Tidak ada data yang tersedia.</p>';
+            dataContainer.innerHTML = '<p style="text-align: center; margin-top: 7px;">Tidak ada data yang tersedia.</p>';
             return;
         }
 
