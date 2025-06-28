@@ -439,6 +439,34 @@
           $('#confirmationModal').modal('toggle');
       });
     });
+
+    // Share ke Platform lain
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tombol untuk Instagram dan TikTok
+        const instagramBtn = document.getElementById('share-instagram-btn');
+        const tiktokBtn = document.getElementById('share-tiktok-btn');
+        
+        // Fungsi untuk menyalin URL artikel ke clipboard
+        function copyArticleLink() {
+            // Mengambil URL halaman saat ini secara dinamis
+            const articleUrl = window.location.href;
+            
+            navigator.clipboard.writeText(articleUrl).then(() => {
+                alert('Link artikel berhasil disalin! Anda bisa menempelnya di postingan atau bio.');
+            }).catch(err => {
+                console.error('Gagal menyalin link:', err);
+                alert('Maaf, gagal menyalin link. Silakan salin URL dari address bar secara manual.');
+            });
+        }
+
+        // Tambahkan event listener ke tombol Instagram dan TikTok
+        if (instagramBtn) {
+            instagramBtn.addEventListener('click', copyArticleLink);
+        }
+        if (tiktokBtn) {
+            tiktokBtn.addEventListener('click', copyArticleLink);
+        }
+    });
   </script>
 
   <!-- JS Page -->

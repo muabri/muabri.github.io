@@ -99,16 +99,16 @@
             <div class="col-sm mb-2 mb-sm-0">
               <div class="d-flex align-items-center">
                 <span class="text-cap mb-0 me-2">Share:</span>
-                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://www.instagram.com/" target="_blank">
+                <a id="share-instagram-btn" class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="javascript:void(0);" target="_blank" title="Bagikan ke Instagram (Salin Link)">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://www.tiktok.com/" target="_blank">
+                <a id="share-tiktok-btn" class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="javascript:void(0);" target="_blank" title="Bagikan ke TikTok (Salin Link)">
                     <i class="fab fa-tiktok"></i>
                 </a>
-                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://www.linkedin.com/" target="_blank">
+                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://www.linkedin.com/sharing/share-offsite/?url=https://ruangweb.site/gapi/" target="_blank" title="Bagikan ke LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://www.linkedin.com/" target="_blank">
+                <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="https://wa.me/?text=Lihat%20solusi%20integrasi%20API%20website%20dari%20Ruang%20Website.%20Selengkapnya%20di%20sini%3A%20https%3A%2F%2Fruangweb.site%2Fgapi%2F" target="_blank" title="Bagikan ke WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
               </div>
@@ -353,6 +353,33 @@
           form.submit();
           $('#confirmationModal').modal('toggle');
       });
+    });
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tombol untuk Instagram dan TikTok
+        const instagramBtn = document.getElementById('share-instagram-btn');
+        const tiktokBtn = document.getElementById('share-tiktok-btn');
+        
+        // Fungsi untuk menyalin URL halaman saat ini ke clipboard
+        function copyCurrentPageLink() {
+            const currentUrl = window.location.href; // Mengambil URL halaman yang sedang dibuka
+            
+            navigator.clipboard.writeText(currentUrl).then(() => {
+                alert('Link berhasil disalin! Sekarang Anda bisa menempelkannya di aplikasi.');
+            }).catch(err => {
+                console.error('Gagal menyalin link:', err);
+                alert('Maaf, gagal menyalin link. Silakan salin URL dari address bar secara manual.');
+            });
+        }
+
+        // Tambahkan event listener click ke tombol-tombol
+        if (instagramBtn) {
+            instagramBtn.addEventListener('click', copyCurrentPageLink);
+        }
+        if (tiktokBtn) {
+            tiktokBtn.addEventListener('click', copyCurrentPageLink);
+        }
     });
   </script>
 
