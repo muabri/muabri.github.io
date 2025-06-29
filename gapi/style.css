@@ -14,17 +14,17 @@
     border-radius: 12px;
 }
 
-.search-form-container {
+/* .search-form-container {
     margin-bottom: 25px;
     text-align: center;
-}
+} */
 
 #search-input {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     padding: 12px 20px;
     border: 2px solid #ddd;
-    border-radius: 50px; /* Bentuk pil */
+    /* border-radius: 50px; */
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
