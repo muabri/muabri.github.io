@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // --- MEMBANGUN TABEL HTML SECARA DINAMIS ---
         let htmlTable = '<table><thead><tr>';
 
-        // Tentukan header tabel sesuai dengan kolom yang ingin ditampilkan
-        const displayHeaders = ['Nama', 'No Telp', 'ID-Game', 'Role', 'RT', 'Pembayaran'];
+        // Tentukan header tabel, tambahkan 'No' di awal
+        const displayHeaders = ['No', 'Nama', 'No Telp', 'ID-Game', 'RT', 'Pembayaran'];
 
         // Buat header tabel
         displayHeaders.forEach(header => {
@@ -45,13 +45,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         htmlTable += '</tr></thead><tbody>';
 
         // Buat baris data
-        data.forEach(row => {
+        data.forEach((row, index) => { // Menggunakan 'index' untuk nomor urut
             htmlTable += '<tr>';
-            displayHeaders.forEach(header => {
-                // Ambil nilai sel berdasarkan nama header, jika tidak ada, gunakan string kosong
-                const cellValue = row[header] || ''; 
+            
+            // --- SEL UNTUK NOMOR URUT ---
+            htmlTable += `<td>${index + 1}</td>`; // Nomor urut dimulai dari 1
+            
+            // --- SEL UNTUK DATA LAINNYA ---
+            // Kolom yang ingin ditampilkan
+            const dataKeys = ['Nama', 'No Telp', 'ID-Game', 'RT', 'Pembayaran'];
+            dataKeys.forEach(key => {
+                // Ambil nilai sel berdasarkan nama header, jika null/undefined gunakan string kosong
+                const cellValue = row[key] || ''; 
                 htmlTable += `<td>${cellValue}</td>`;
             });
+            
             htmlTable += '</tr>';
         });
         
