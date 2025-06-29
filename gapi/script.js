@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let htmlTable = '<table><thead><tr>';
 
         // Tentukan header tabel sesuai dengan kolom yang ingin ditampilkan
-        const displayHeaders = ['Nama', 'No Telp', 'ID-Game', 'Role', 'RT', 'Pembayaran'];
+        const displayHeaders = ['No', 'Nama', 'No Telp', 'ID-Game', 'Role', 'RT', 'Pembayaran'];
 
         // Buat header tabel
         displayHeaders.forEach(header => {
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         data.forEach(row => {
             htmlTable += '<tr>';
             displayHeaders.forEach(header => {
+                htmlTable += `<td>${index + 1}</td>`;
                 // Ambil nilai sel berdasarkan nama header, jika tidak ada, gunakan string kosong
                 const cellValue = row[header] || ''; 
                 htmlTable += `<td>${cellValue}</td>`;
