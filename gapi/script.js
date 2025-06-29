@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let htmlTable = '<table><thead><tr>';
 
         // Tentukan header tabel, tambahkan 'No' di awal
-        const displayHeaders = ['No', 'Nama', 'No Telp', 'ID-Game', 'RT', 'Pembayaran'];
+        const displayHeaders = ['No', 'Nama', 'No Telp', 'ID-Game', 'Role', 'RT', 'Pembayaran'];
 
         // Buat header tabel
         displayHeaders.forEach(header => {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             
             // --- SEL UNTUK DATA LAINNYA ---
             // Kolom yang ingin ditampilkan
-            const dataKeys = ['Nama', 'No Telp', 'ID-Game', 'RT', 'Pembayaran'];
+            const dataKeys = ['Nama', 'No Telp', 'ID-Game', 'Role', 'RT', 'Pembayaran'];
             dataKeys.forEach(key => {
                 // Ambil nilai sel berdasarkan nama header, jika null/undefined gunakan string kosong
                 const cellValue = row[key] || ''; 
