@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-startbar="dark" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pengajuan Surat | Warga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Pengajuan Surat" name="description" />
+    <meta content="Putri Nurlisa" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/logo.png">
+    <!-- App css -->
+    <link href="../assets/libs/uppy/uppy.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+    <!-- Top Bar Start -->
+    <body>
+        <!-- Top Bar Start -->
+        <div class="topbar d-print-none">
+            <div class="container-fluid">
+                <nav class="topbar-custom d-flex justify-content-between" id="topbar-custom">    
+        
+                    <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">                        
+                        <li>
+                            <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
+                                <i class="iconoir-menu"></i>
+                            </button>
+                        </li>                
+                    </ul>
+
+                    <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">
+        
+                        <li class="topbar-item">
+                            <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">
+                                <i class="iconoir-half-moon dark-mode"></i>
+                                <i class="iconoir-sun-light light-mode"></i>
+                            </a>                    
+                        </li>
+    
+                        <li class="dropdown topbar-item">
+                            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false" data-bs-offset="0,19">
+                                <img src="../assets/images/users/user-1.png" alt="" class="thumb-md rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end py-0">
+                                <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
+                                    <div class="flex-shrink-0">
+                                        <img src="../assets/images/users/user-1.png" alt="" class="thumb-md rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2 text-truncate align-self-center">
+                                        <h6 class="my-0 fw-medium text-dark fs-13">Nurlisa Warga</h6>
+                                        <small class="text-muted mb-0">Warga Kelurahan Jatirasa</small>
+                                    </div><!--end media-body-->
+                                </div>
+                                <div class="dropdown-divider mt-0"></div>
+                                <small class="text-muted px-2 pb-1 d-block">Account</small>
+                                <a class="dropdown-item" href="#profile.html"><i class="las la-user fs-18 me-1 align-text-bottom"></i> Profile</a>
+                                <small class="text-muted px-2 py-1 d-block">Settings</small>                        
+                                <a class="dropdown-item" href="#"><i class="las la-cog fs-18 me-1 align-text-bottom"></i>Account Settings</a>
+                                <a class="dropdown-item" href="#"><i class="las la-question-circle fs-18 me-1 align-text-bottom"></i> Help Center</a>                       
+                                <div class="dropdown-divider mb-0"></div>
+                                <a class="dropdown-item text-danger" href="../index.html"><i class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul><!--end topbar-nav-->
+                </nav>
+                <!-- end navbar-->
+            </div>
+        </div>
+        <!-- Top Bar End -->
+        <!-- leftbar-tab-menu -->
+        <div class="startbar d-print-none">
+            <!--start brand-->
+            <div class="brand">
+                <a href="#" class="logo">
+                    <span>
+                        <img src="../assets/images/logo.png" alt="logo-small" class="logo-sm">
+                    </span>
+                    <span class="">
+                        <img src="../assets/images/logo.png" alt="logo-large" class="logo-lg logo-light">
+                        <img src="../assets/images/logo.png" alt="logo-large" class="logo-lg logo-dark">
+                    </span>
+                </a>
+            </div>
+            <!--end brand-->
+            <!--start startbar-menu-->
+            <div class="startbar-menu" >
+                <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+                    <div class="d-flex align-items-start flex-column w-100">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav mb-auto w-100">
+                            <li class="menu-label mt-2">
+                                <span>Main</span>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <i class="iconoir-report-columns menu-icon"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pengajuan-surat.html">
+                                    <i class="iconoir-database-script-plus menu-icon"></i>
+                                    <span>Pengajuan Surat</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="data-surat.html">
+                                    <i class="iconoir-clipboard-check menu-icon"></i>
+                                    <span>Data Surat</span>
+                                    <span class="badge rounded text-success bg-success-subtle ms-1">New</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="history-surat.html">
+                                    <i class="iconoir-clock menu-icon"></i>
+                                    <span>History Surat</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-label mt-2">
+                                <small class="label-border">
+                                    <div class="border_left hidden-xs"></div>
+                                    <div class="border_right"></div>
+                                </small>
+                                <span>Account</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="iconoir-profile-circle menu-icon"></i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="iconoir-settings menu-icon"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="../index.html">
+                                    <i class="las la-power-off menu-icon text-danger"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul><!--end navbar-nav--->
+                    </div>
+                </div><!--end startbar-collapse-->
+            </div><!--end startbar-menu-->    
+        </div><!--end startbar-->
+        <div class="startbar-overlay d-print-none"></div>
+        <!-- end leftbar-tab-menu-->
+
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="page-title-box d-md-flex justify-content-md-between align-items-center">
+                      <h4 class="page-title">Buat SURAT KETERANGAN DOMISILI</h4>
+                      <div class="">
+                        <ol class="breadcrumb mb-0">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a>
+                          </li>
+                          <li class="breadcrumb-item"><a href="pengajuan-surat.html">Pengajuan Surat</a>
+                          </li>
+                          <li class="breadcrumb-item active">Surat Keterangan Domisili</li>
+                        </ol>
+                      </div>                                
+                    </div><!--end page-title-box-->
+                  </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center mb-2">
+                  <div class="col">
+                    <a href="data-surat.html" type="submit" class="btn btn-primary px-4">Buat Surat</a>
+                    <button type="reset" class="btn btn-danger px-4">Reset</button>
+                  </div>
+                </div>
+
+                <div class="row">                        
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <form class="">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="nama-lengkap" class="form-label">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="nama-lengkap" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 col-md-5">
+                                  <div class="mb-1">
+                                    <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
+                                    <input type="text" class="form-control" id="tempat-lahir" required="">
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                  <div class="mb-1">
+                                    <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
+                                    <input type="date" class="form-control" id="tanggal-lahir" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row mb-1">
+                                <label class="col-12 my-1 control-label">Jenis Kelamin</label>
+                                <div class="col-12 my-1">
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="laki-laki" value="laki-laki">
+                                    <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="perempuan" value="perempuan">
+                                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
+                                    <input type="text" class="form-control" id="kewarganegaraan" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="agama" class="form-label">Agama</label>
+                                    <input type="text" class="form-control" id="agama" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                                    <input type="text" class="form-control" id="pekerjaan" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="nik" class="form-label">NIK</label>
+                                    <input type="text" class="form-control" id="nik" required="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">                            
+                                  <div class="mb-1">
+                                    <label class="form-label" for="alamat">Alamat K-KTP</label>
+                                    <textarea class="form-control" rows="2" id="alamat"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">                            
+                                  <div class="mb-1">
+                                    <label class="form-label fw-semibold" for="tujuan">Maksud / Tujuan</label>
+                                    <textarea class="form-control border-info" rows="3" id="tujuan"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="col-lg-5">
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="surat-pengantar" class="form-label">Surat Pengantar RT/RW</label>
+                                    <div class="input-group">
+                                      <input type="file" class="form-control" id="surat-pengantar">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="fotocopy-kk" class="form-label">Fotocopy KK</label>
+                                    <div class="input-group">
+                                      <input type="file" class="form-control" id="fotocopy-kk">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="fotocopy-ktp" class="form-label">Fotocopy KTP</label>
+                                    <div class="input-group">
+                                      <input type="file" class="form-control" id="fotocopy-ktp">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="kk-pemohon" class="form-label">KK Pemohon</label>
+                                    <div class="input-group">
+                                      <input type="file" class="form-control" id="kk-pemohon">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-1">
+                                    <label for="bukti-lunas-pbb" class="form-label">Bukti lunas PBB</label>
+                                    <div class="input-group">
+                                      <input type="file" class="form-control" id="bukti-lunas-pbb">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">                            
+                                  <div class="mb-1">
+                                    <label class="form-label" for="berkas-perlengkapan-lain">Berkas perlengkapan lain</label>
+                                    <div id="drag-drop-area"></div>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                          </div>
+                        </form>   
+                      </div><!--end card-body--> 
+                    </div><!--end card--> 
+                  </div>
+                </div>                                      
+              </div>
+                
+                <footer class="footer text-center text-sm-start d-print-none">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card mb-0 rounded-bottom-0">
+                                    <div class="card-body">
+                                        <p class="text-muted mb-0">
+                                            ©
+                                            <script> document.write(new Date().getFullYear()) </script>
+                                            Kelurahan Jatirasa
+                                            <span
+                                                class="text-muted d-none d-sm-inline-block float-end">
+                                                Design with
+                                                <i class="iconoir-heart-solid text-danger align-middle"></i>
+                                                by Putri Nurlisa</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- Javascript  -->  
+        <!-- vendor js -->
+        
+        <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+        
+        <script src="../assets/libs/uppy/uppy.legacy.min.js"></script>
+        <script src="../assets/js/pages/file-upload.init.js"></script>
+        <script src="../assets/js/DynamicSelect.js"></script>
+        <script src="../assets/js/app.js"></script>
+    </body>
+    <!--end body-->
+</html>
