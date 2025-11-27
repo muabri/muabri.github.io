@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Donasi - Syiar Syair Majelis Syababul Kheir</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "sans-serif"] },
+            colors: {
+              islamic: {
+                base: "#047857",
+                dark: "#064e3b",
+                light: "#10b981",
+                gold: "#d97706",
+                goldLight: "#fcd34d",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .islamic-pattern {
+        background-color: #064e3b;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      /* Loader Animation */
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #d97706;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- HEADER -->
+    <header class="islamic-pattern text-white relative pb-24 pt-12 shadow-lg">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"
+      ></div>
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <div
+          class="mb-4 text-islamic-goldLight opacity-80 text-sm tracking-widest uppercase font-semibold"
+        >
+          Bismillahirrahmanirrahim
+        </div>
+        <h1
+          class="text-2xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-md"
+        >
+          UPDATE PEROLEHAN DONASI <br />
+          <span class="text-islamic-goldLight">TABLIGH AKBAR SYIAR SYAIR</span>
+        </h1>
+        <h2 class="text-lg md:text-xl font-light mb-2">
+          Alun-Alun Kota Bogor Bersama Majelis Syababul Kheir
+        </h2>
+        <div
+          class="mt-6 inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20"
+        >
+          <i class="far fa-calendar-alt mr-2 text-islamic-goldLight"></i>
+          <span class="font-semibold text-sm md:text-base"
+            >Sabtu, 29 November 2025</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section class="container mx-auto px-4 -mt-16 relative z-20 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- KARTU 1: TOTAL TERKUMPUL -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-6 flex items-center border-l-8 border-islamic-gold transform transition hover:-translate-y-1"
+        >
+          <div class="bg-green-100 p-4 rounded-full mr-5 text-islamic-base">
+            <i class="fa-solid fa-hand-holding-dollar text-3xl"></i>
+          </div>
+          <div>
+            <p
+              class="text-gray-500 text-sm font-semibold uppercase tracking-wide"
+            >
+              Total Terkumpul
+            </p>
+            <h3
+              id="total-amount"
+              class="text-2xl md:text-3xl font-bold text-gray-800 mt-1"
+            >
+              <div class="loader"></div>
+              <!-- Loader Awal -->
+            </h3>
+          </div>
+        </div>
+
+        <!-- KARTU 2: TOTAL DONATUR -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-6 flex items-center border-l-8 border-islamic-base transform transition hover:-translate-y-1"
+        >
+          <div class="bg-blue-100 p-4 rounded-full mr-5 text-blue-600">
+            <i class="fa-solid fa-users text-3xl"></i>
+          </div>
+          <div>
+            <p
+              class="text-gray-500 text-sm font-semibold uppercase tracking-wide"
+            >
+              Total Donatur
+            </p>
+            <h3
+              id="total-donors"
+              class="text-2xl md:text-3xl font-bold text-gray-800 mt-1"
+            >
+              <div class="loader"></div>
+              <!-- Loader Awal -->
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABEL DATA -->
+    <section class="container mx-auto px-4 mb-20 max-w-5xl flex-grow">
+      <div class="flex flex-col md:flex-row justify-between mb-6 gap-4">
+        <div>
+          <h2
+            class="text-xl md:text-2xl font-bold text-islamic-dark border-b-4 border-islamic-gold inline-block pb-1"
+          >
+            Daftar Para Muhsinin
+          </h2>
+          <div class="text-sm text-gray-500 italic mt-1" id="last-update">
+            Mengambil data...
+          </div>
+        </div>
+
+        <!-- INPUT SEARCH -->
+        <div class="relative w-full md:w-1/3">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Cari Nama, Nominal, atau Domisili..."
+            class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-islamic-light focus:border-transparent shadow-sm transition"
+            disabled
+          />
+          <div
+            class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+          >
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100"
+      >
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr
+                class="bg-islamic-base text-white text-sm uppercase tracking-wider"
+              >
+                <th class="p-4 font-semibold w-16 text-center">No</th>
+                <th class="p-4 font-semibold">Nama Donatur</th>
+                <th class="p-4 font-semibold text-right">Nominal</th>
+                <th class="p-4 font-semibold">Domisili</th>
+              </tr>
+            </thead>
+            <tbody
+              id="donation-list"
+              class="text-gray-700 text-sm md:text-base"
+            >
+              <!-- Data akan dimasukkan di sini oleh JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pesan Error / Kosong -->
+        <div id="status-message" class="p-8 text-center text-gray-500 hidden">
+          Belum ada data donasi.
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-islamic-dark text-white py-8 text-center mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="mb-4">
+          <i
+            class="fa-solid fa-mosque text-3xl text-islamic-gold mb-3 opacity-80"
+          ></i>
+          <p class="text-islamic-goldLight font-medium text-lg italic">
+            "Jazakumullah Khairan Katsiran"
+          </p>
+        </div>
+        <hr class="border-white/10 my-4 w-1/2 mx-auto" />
+        <p class="text-xs text-gray-400">&copy; 2025 Majelis Syababul Kheir</p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+      // --- KONFIGURASI ---
+      const APPS_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbxyxyCudAhRMceNz2rjhPlrBfoNacsjBLS5m6LN-LaiPp1Rx_pLFrhvo7owU7nBGL9y/exec";
+
+      // Variabel Global untuk menyimpan data
+      let allDonations = [];
+
+      // Format Rupiah
+      const formatRupiah = (number) => {
+        return new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        }).format(number);
+      };
+
+      // Fungsi Utama Fetch Data
+      async function fetchData() {
+        const statusMsg = document.getElementById("status-message");
+        const totalAmountEl = document.getElementById("total-amount");
+        const totalDonorsEl = document.getElementById("total-donors");
+        const lastUpdateEl = document.getElementById("last-update");
+        const searchInput = document.getElementById("search-input");
+
+        try {
+          const response = await fetch(APPS_SCRIPT_URL);
+          const json = await response.json();
+
+          if (json.status !== "success") {
+            throw new Error(json.message || "Gagal mengambil data");
+          }
+
+          // Simpan data ke variabel global
+          allDonations = json.data;
+
+          // Aktifkan input search setelah data dimuat
+          searchInput.disabled = false;
+
+          // Hitung Total Dashboard (Menggunakan seluruh data)
+          const totalAmount = allDonations.reduce(
+            (sum, item) => sum + item.nominal,
+            0
+          );
+
+          // Update Dashboard
+          totalAmountEl.innerText = formatRupiah(totalAmount);
+          totalDonorsEl.innerText = `${allDonations.length} Orang`;
+
+          // Update Waktu
+          const now = new Date();
+          lastUpdateEl.innerText = `Update: ${now.toLocaleTimeString(
+            "id-ID"
+          )} WIB`;
+
+          // Render Tabel Pertama Kali
+          renderTable(allDonations);
+        } catch (error) {
+          console.error("Error:", error);
+          statusMsg.innerHTML = `<span class="text-red-500">Gagal memuat data. Pastikan URL Apps Script benar.<br>(${error.message})</span>`;
+          statusMsg.classList.remove("hidden");
+          totalAmountEl.innerText = "-";
+          totalDonorsEl.innerText = "-";
+        }
+      }
+
+      // Fungsi Render Tabel (Dibuat terpisah agar bisa dipanggil fitur Search)
+      function renderTable(dataToRender) {
+        const tableBody = document.getElementById("donation-list");
+        const statusMsg = document.getElementById("status-message");
+
+        tableBody.innerHTML = ""; // Bersihkan tabel
+
+        if (dataToRender.length === 0) {
+          statusMsg.innerText = "Data tidak ditemukan.";
+          statusMsg.classList.remove("hidden");
+          return;
+        } else {
+          statusMsg.classList.add("hidden");
+        }
+
+        dataToRender.forEach((item, index) => {
+          const row = document.createElement("tr");
+          row.className =
+            "border-b border-gray-100 hover:bg-green-50 transition odd:bg-white even:bg-gray-50";
+
+          // Menggunakan index dari data asli jika ingin mempertahankan nomor urut asli,
+          // atau index loop untuk nomor urut tampilan. Di sini kita gunakan nomor urut tampilan.
+          row.innerHTML = `
+                <td class="p-4 text-center font-bold text-islamic-base">${
+                  index + 1
+                }</td>
+                <td class="p-4 font-medium">${item.nama}</td>
+                <td class="p-4 text-right font-bold text-islamic-dark">${formatRupiah(
+                  item.nominal
+                )}</td>
+                <td class="p-4 text-gray-500">${item.domisili || "-"}</td>
+            `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      // Fungsi Event Listener untuk Search
+      document
+        .getElementById("search-input")
+        .addEventListener("input", function (e) {
+          const keyword = e.target.value.toLowerCase();
+
+          const filteredData = allDonations.filter((item) => {
+            const namaMatch = item.nama.toLowerCase().includes(keyword);
+            const domisiliMatch = (item.domisili || "")
+              .toLowerCase()
+              .includes(keyword);
+            // Mencocokkan nominal (bisa cari "50000" atau "50.000")
+            const nominalString = item.nominal.toString();
+            const nominalFormatted = formatRupiah(item.nominal).toLowerCase();
+            const nominalMatch =
+              nominalString.includes(keyword) ||
+              nominalFormatted.includes(keyword);
+
+            return namaMatch || domisiliMatch || nominalMatch;
+          });
+
+          renderTable(filteredData);
+        });
+
+      // Jalankan saat halaman dimuat
+      document.addEventListener("DOMContentLoaded", fetchData);
+    </script>
+  </body>
+</html>
