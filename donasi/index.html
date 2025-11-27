@@ -146,8 +146,10 @@
 
     <!-- TABEL DATA -->
     <section class="container mx-auto px-4 mb-20 max-w-5xl flex-grow">
-      <div class="flex flex-col md:flex-row justify-between mb-6 gap-4">
-        <div>
+      <div
+        class="flex flex-col md:flex-row items-center justify-between mb-6 gap-4"
+      >
+        <div class="self-start md:self-auto">
           <h2
             class="text-xl md:text-2xl font-bold text-islamic-dark border-b-4 border-islamic-gold inline-block pb-1"
           >
@@ -259,6 +261,9 @@
           // Simpan data ke variabel global
           allDonations = json.data;
 
+          // LOGIKA SORTING BARU: Urutkan Nominal Terbesar ke Terkecil
+          allDonations.sort((a, b) => b.nominal - a.nominal);
+
           // Aktifkan input search setelah data dimuat
           searchInput.disabled = false;
 
@@ -272,11 +277,13 @@
           totalAmountEl.innerText = formatRupiah(totalAmount);
           totalDonorsEl.innerText = `${allDonations.length} Orang`;
 
-          // Update Waktu
+          // LOGIKA WAKTU BARU: Tanpa detik
           const now = new Date();
-          lastUpdateEl.innerText = `Update: ${now.toLocaleTimeString(
-            "id-ID"
-          )} WIB`;
+          const timeString = now.toLocaleTimeString("id-ID", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          lastUpdateEl.innerText = `Update: ${timeString} WIB`;
 
           // Render Tabel Pertama Kali
           renderTable(allDonations);
